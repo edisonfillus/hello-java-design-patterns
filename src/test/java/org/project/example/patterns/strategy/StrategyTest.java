@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
 
-public class PaySlipTest {
+public class StrategyTest {
 
 	@Test
 	public void shouldCalculateTaxesBrazilCorrect() {
