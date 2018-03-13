@@ -1,15 +1,15 @@
-package org.project.example.patterns.chainofresponsability;
+package org.project.example.patterns.chainofresponsibility;
 
-public class ApplyVolumeDiscount implements ApplyDiscount {
+public class ApplyValueDiscount implements ApplyDiscount {
 
-	//Keep the successor on chain
+	// Keep the successor on chain
 	private ApplyDiscount successor;
 
 	@Override
 	public double calculateDiscount(Estimate estimate) {
-		// If client bought more than 5 items, give 10% discount
-		if (estimate.getItems().stream().mapToInt(Item::getQuantity).sum() > 5) {
-			return estimate.getTotal() * 0.1;
+		// If client bought more than 500.00 , give 8% discount
+		if (estimate.getTotal() > 500.0) {
+			return estimate.getTotal() * 0.08;
 		}
 		// Or else, call successor if exist
 		if (successor != null) {

@@ -1,4 +1,4 @@
-package org.project.example.patterns.chainofresponsability;
+package org.project.example.patterns.chainofresponsibility;
 
 public class Item {
 

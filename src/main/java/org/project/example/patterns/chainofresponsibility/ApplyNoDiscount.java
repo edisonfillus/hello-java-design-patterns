@@ -1,4 +1,4 @@
-package org.project.example.patterns.chainofresponsability;
+package org.project.example.patterns.chainofresponsibility;
 
 /**
  * Optional Class for Chain of Responsability. It's just useful for code readability

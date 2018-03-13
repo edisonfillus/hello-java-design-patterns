@@ -4,6 +4,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.project.example.patterns.chainofresponsibility.ApplyDiscount;
+import org.project.example.patterns.chainofresponsibility.ApplyNoDiscount;
+import org.project.example.patterns.chainofresponsibility.ApplyValueDiscount;
+import org.project.example.patterns.chainofresponsibility.ApplyVolumeDiscount;
+import org.project.example.patterns.chainofresponsibility.Estimate;
+import org.project.example.patterns.chainofresponsibility.Item;
 
 public class ChainOfResponsibilityTest {
 	
