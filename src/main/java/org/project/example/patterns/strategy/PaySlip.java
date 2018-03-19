@@ -1,21 +1,28 @@
 package org.project.example.patterns.strategy;
 
+import java.time.YearMonth;
+
 public class PaySlip {
 
-	private String employee;
-	private double gross;
-	private double taxes;
-	private double net;
+	private final Country country;
+	private final Employee employee;
+	private final YearMonth yearMonth;
+	private final double gross;
+	private final double taxes;
+	private final double net;
+
 		
-	public PaySlip(String employee, double gross, IncomeTaxStrategy taxStrategy) {
+	public PaySlip(Country country, Employee employee, YearMonth yearMonth, double gross) {
 		super();
+		this.country = country;
 		this.employee = employee;
+		this.yearMonth = yearMonth;
 		this.gross = gross;
-		taxes = taxStrategy.calculate(gross);
+		taxes = country.getIncomeTaxCalculatorStrategy().getIncomeTaxCalculator().calculate(gross,yearMonth);
 		net = gross - taxes;
 	}
 
-	public String getEmployee() {
+	public Employee getEmployee() {
 		return employee;
 	}
 	
@@ -30,6 +37,15 @@ public class PaySlip {
 	public double getNet() {
 		return net;
 	}
+
+	public Country getCountry() {
+		return country;
+	}
+
+	public YearMonth getYearMonth() {
+		return yearMonth;
+	}
+
 	
 	
 }
